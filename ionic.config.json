@@ -1,0 +1,7 @@
+{
+  "name": "Instituto",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

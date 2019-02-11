@@ -1,0 +1,30 @@
+<!--
+  Generated template for the InscripcionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Descripción del Curso</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+  <button ion-item *ngFor="let curso of infoCurso"> 
+    <ion-avatar item-start>  
+    <img src="assets/imgs/avatar.png" class="logo"/>
+    </ion-avatar>
+      <h1>{{curso.nombre}}</h1>
+      <h1>{{curso.dias}}</h1>
+      <h1>{{curso.horario}}</h1>
+      <h1>{{curso.costo}}</h1>
+  </button>
+</ion-list>
+
+</ion-content>

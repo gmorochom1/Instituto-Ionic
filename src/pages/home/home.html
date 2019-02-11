@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-list>
+  <li ion-item *ngFor="let dato of datosUsuario">
+       <h2>Bienvenido {{dato.nombres}} </h2>
+       <button ion-button color="primary" (click)="logout()" icon-right>Cerrar sesión<ion-icon name="log-out"></ion-icon></button>
+       <button ion-button color="primary" (click)="actualizar()" icon-right>Actualizar datos <ion-icon name="checkbox-outline"></ion-icon></button>
+  </li> 
+  </ion-list>
+
+  <h2>Mis Cursos</h2>
+
+  <ion-list>
+  <button ion-item *ngFor="let curso of cursos" (click)="itemSelected(curso.nombre)"> 
+    <ion-avatar item-start>  
+    <img src="assets/imgs/avatar.png" class="logo"/>
+    </ion-avatar>
+      <h2>{{curso.nombre}}</h2>
+      <p>Profesor: {{curso.profesor.nombre}}</p>
+      <p>Dias de Clase: {{curso.dias}}</p>
+      <p>Horario: {{curso.horario}}</p>  
+  </button>
+</ion-list>
+
+
+</ion-content>

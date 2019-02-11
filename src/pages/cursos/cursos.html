@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cursos Ofertados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <button ion-item *ngFor="let curso of cursos" (click)="itemSelected(curso.nombre)"> 
+    <ion-avatar item-start>  
+    <img src="assets/imgs/avatar.png" class="logo"/>
+    </ion-avatar>
+      <h2>{{curso.nombre}}</h2>
+      <p>Profesor: {{curso.profesor.nombre}}</p>
+      <p>Fecha de Inicio: {{curso.fechaInicio}}</p>
+      <p>Fecha de Culminación: {{curso.fechaFin}}</p>
+      <p>Dias de Clase: {{curso.dias}}</p>
+      <p>Horario: {{curso.horario}}</p>
+      <p>Costo: {{curso.costo}}</p>
+      <p>Carrera: {{curso.carrera.nombre}}</p>  
+      <p>Director: {{curso.carrera.director}}</p>   
+  </button>
+</ion-list>
+</ion-content>

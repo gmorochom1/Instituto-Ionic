@@ -1,0 +1,37 @@
+<!--
+  Generated template for the MainProfesorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Página Principal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <ion-list>
+  <li ion-item *ngFor="let pro of infoProfesor">
+       <h2>Bienvenido {{pro.nombre}}</h2>
+        <button ion-button color="primary" (click)="logout()"  icon-right>Cerrar sesión<ion-icon name="log-out"></ion-icon></button>
+        <button ion-button color="primary" (click)="actualizar()" icon-right>Actualizar datos <ion-icon name="checkbox-outline"></ion-icon></button>
+  </li> 
+  </ion-list>
+
+  <h2>Cursos</h2>
+<ion-list>
+  <button ion-item *ngFor="let curso of cursos" (click)="itemSelected(curso.nombre)"> 
+    <ion-avatar item-start>  
+    <img src="assets/imgs/avatar.png" class="logo"/>
+    </ion-avatar>
+      <h2>{{curso.nombre}}</h2>
+      <p>Dias: {{curso.dias}}</p>
+      <p>Horario: {{curso.horario}}</p>
+  </button>
+</ion-list>
+</ion-content>
